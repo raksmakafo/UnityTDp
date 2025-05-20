@@ -5453,14 +5453,14 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-<<<<<<< HEAD
+HEAD
   - {fileID: 953013422}
   - {fileID: 1370190157}
   - {fileID: 1888263781}
   - {fileID: 1101823648}
-=======
+
   - {fileID: 542638468}
   - {fileID: 119645337}
   - {fileID: 1650691013}
   - {fileID: 1999019578}
->>>>>>> 300b95e1a8ec3b33d80619b300ed306053ea6410
+ 300b95e1a8ec3b33d80619b300ed306053ea6410
