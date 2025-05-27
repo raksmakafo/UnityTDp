@@ -5,6 +5,8 @@ public class GameControllerScript : MonoBehaviour
 {
     public int cellCount;
 
+    int[] pathID = { };
+
     public GameObject cellPref;
     public Transform cellGroup;
 
@@ -12,6 +14,7 @@ public class GameControllerScript : MonoBehaviour
     {
         // Create the cells at the start of the game
         CreateCells();
+        CreatePath();
     }
     void CreateCells()
     {
@@ -19,6 +22,7 @@ public class GameControllerScript : MonoBehaviour
         {
             GameObject tmpCell = Instantiate(cellPref);
             tmpCell.transform.SetParent(cellGroup, false);
+            tmpCell.GetComponent<CellSCR>().id = i + 1;
             tmpCell.GetComponent<CellSCR>().SetState(0);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class CellSCR : MonoBehaviour
 {
 
-    public int state;
+    public int state, id;
 
     public Color normCol, pathCol; 
     void Start()
