@@ -9,7 +9,7 @@ public class EnemyScr : MonoBehaviour
     List<GameObject> wayPoints = new List<GameObject>();
 
     int wayIndex = 0;
-    public int speed = 10;
+    private int speed = 1;
     private void Start()
     {
         wayPoints = GameObject.Find("Camera").GetComponent<GameControllerScript>().wayPoints;
