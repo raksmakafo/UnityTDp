@@ -13,6 +13,7 @@ public class EnemyScr : MonoBehaviour
 
     int wayIndex = 0;
     private int speed = 3;
+    public int health = 30;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyScr : MonoBehaviour
     void Update() {
 
         Move();
+        CheckIsLive();
 
     }
 
@@ -51,5 +53,18 @@ public class EnemyScr : MonoBehaviour
        
         }
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+
+   public void CheckIsLive()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

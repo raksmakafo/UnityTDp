@@ -33,6 +33,9 @@ public class EnemySpawnerScr : MonoBehaviour
         {
             GameObject tmpEnemy = Instantiate(EnemyPref);
             tmpEnemy.transform.SetParent(gameObject.transform, false);
+
+            tmpEnemy.tag = "Enemy";
+
             tmpEnemy.GetComponent<EnemyScr>().wayPointParent = WayPointParent; // Set the wayPointParent for the enemy
             yield return new WaitForSeconds(0.3f);// Wait for a short time before spawning enemies
 
