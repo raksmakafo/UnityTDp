@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pngimg.com - arrow_bow_PNG37_0: -3874744721562697361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
