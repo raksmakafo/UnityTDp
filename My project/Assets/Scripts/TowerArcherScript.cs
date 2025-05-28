@@ -55,8 +55,11 @@ public class TowerArcherScript : MonoBehaviour
     {
         CurrCooldown = Cooldown; // Reset the cooldown after shooting
         GameObject proj = Instantiate(Projectile);
-        proj.transform.position = transform.position; 
-        proj.GetComponent<TowerArcherArrowSCR>().SetTarget(enemy); // Assuming ProjectileScript has a Target property
+        proj.transform.position = transform.position;
+        //proj.GetComponent<TowerArcherArrowSCR>().SetTarget(enemy); // Assuming ProjectileScript has a Target property
+        proj.transform.SetParent(null);
+        proj.GetComponent<TowerArcherArrowSCR>().target = enemy;
+
     }
 
     private void OnDrawGizmosSelected()

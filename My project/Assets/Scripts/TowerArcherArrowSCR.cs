@@ -3,12 +3,17 @@ using UnityEngine;
 public class TowerArcherArrowSCR : MonoBehaviour
 {
 
-    Transform target;
+    public Transform target;
     float speed = 10f; 
     int damage = 10; 
 
     void Update()
     {
+        if (target == null)
+        {
+            Destroy(gameObject); // Без цели стрела уничтожается
+            return;
+        }
         Move();
     }
 

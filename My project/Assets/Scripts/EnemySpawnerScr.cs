@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class EnemySpawnerScr : MonoBehaviour
 {
 
-    public float SpawnTime = 2f; 
+    public float SpawnTime = 4f; 
     int SpawnCount = 0;
 
     public GameObject EnemyPref, WayPointParent;
@@ -18,7 +18,7 @@ public class EnemySpawnerScr : MonoBehaviour
         if (SpawnTime <= 0)
         {
             StartCoroutine(SpawnEnemy(1));
-            SpawnTime = 2f; // Reset the spawn time to 2 seconds after spawning an enemy
+            SpawnTime = 4f; // Reset the spawn time to 2 seconds after spawning an enemy
         }
         SpawnTime -= Time.deltaTime; // Decrease the spawn time by the time passed since last frame
 
