@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -8,17 +9,31 @@ public class EnemyScr : MonoBehaviour
  
     List<GameObject> wayPoints = new List<GameObject>();
 
+    public GameObject wayPointParent;
+
     int wayIndex = 0;
-    private int speed = 1;
+    private int speed = 3;
+
     private void Start()
     {
-        wayPoints = GameObject.Find("Camera").GetComponent<GameControllerScript>().wayPoints;
+        // wayPoints = GameObject.Find("Camera").GetComponent<GameControllerScript>().wayPoints;
+        GetWayPoints();
+        
     }
+
 
     void Update() {
 
         Move();
 
+    }
+
+    void GetWayPoints()
+    {
+        for (int i = 0; i < wayPointParent.transform.childCount; i++)
+        {
+            wayPoints.Add(wayPointParent.transform.GetChild(i).gameObject);
+        }
     }
 
     private void Move()
