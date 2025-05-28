@@ -10735,7 +10735,7 @@ GameObject:
   - component: {fileID: 1652837157}
   m_Layer: 5
   m_Name: EnemySpawner
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10771,7 +10771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effffbfb4e860984490053da4639c3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnTime: 2
+  SpawnTime: 4
   EnemyPref: {fileID: 8524347726355325745, guid: fd8012d82a3bfd5439e6295eb47624ac, type: 3}
   WayPointParent: {fileID: 59192347}
 --- !u!1 &1664123394
@@ -14748,11 +14748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8356031610862460626, guid: 1b54bc9ec28fe3f4b954e206b3448b76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.89
+      value: 7.53
       objectReference: {fileID: 0}
     - target: {fileID: 8356031610862460626, guid: 1b54bc9ec28fe3f4b954e206b3448b76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.54
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 8356031610862460626, guid: 1b54bc9ec28fe3f4b954e206b3448b76, type: 3}
       propertyPath: m_LocalPosition.z
