@@ -16,19 +16,21 @@ public class Manager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null) 
+        if (instance == null)
         {
             instance = this;
+
         }
         else if (instance != this)
         {
             Destroy(gameObject);
+
         }
+
         DontDestroyOnLoad(gameObject);
-        
+
+
     }
-
-
     void Start()
     {
         Spawn();
@@ -42,30 +44,28 @@ public class Manager : MonoBehaviour
 
     void Spawn()
     {
-        if(enemiesPerSpawn > 0 && enemiesOnScreen < totalEnemies)
+        if (enemiesPerSpawn > 0 && enemiesOnScreen < totalEnemies) 
         {
-            for (int i = 0; i < enemiesPerSpawn; i++)
+            for (int i =0; i < enemiesPerSpawn; i++)
             {
-                if (enemiesOnScreen < maxEnemiesOnScreen)
-                {
-                    GameObject newEnemy = Instantiate(enemies[0])as GameObject;
+                if (enemiesPerSpawn < maxEnemiesOnScreen) 
+                { 
+                    GameObject newEnemy = Instantiate(enemies[0]) as GameObject;
                     newEnemy.transform.position = spawnPoint.transform.position;
                     enemiesOnScreen += 1;
                 }
 
             }
+        
         }
-
-
     }
 
     public void removeEnemyFromScreen()
     {
-
-        if(enemiesOnScreen > 0)
+        if (enemiesOnScreen > 0) 
         {
             enemiesOnScreen -= 1;
+
         }
     }
-
 }

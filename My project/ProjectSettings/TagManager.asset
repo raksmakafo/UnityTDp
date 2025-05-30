@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - MoviengPoint
-  - WayPoint
+  - MoveingPoint
   layers:
   - Default
   - TransparentFX
