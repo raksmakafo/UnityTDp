@@ -1,4 +1,6 @@
+
 using UnityEngine;
+
 
 public class Enemy : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (wayPoints != null) 
         {
             navigationTime += Time.deltaTime;
