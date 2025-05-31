@@ -1,4 +1,7 @@
+#if UNITY_EDITOR
+using UnityEditor;
 using UnityEditor.Rendering;
+#endif
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 

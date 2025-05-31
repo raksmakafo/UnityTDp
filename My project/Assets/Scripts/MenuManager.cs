@@ -17,8 +17,19 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     public void JoinRoom()
     {
-        PhotonNetwork.JoinRoom(joinInput.text);
+        string roomName = joinInput.text;
+        Debug.Log("Trying to join room: '" + roomName + "'");
+
+        if (string.IsNullOrEmpty(roomName))
+        {
+            Debug.LogError("Room name is empty. Cannot join room.");
+            return;
+        }
+
+        PhotonNetwork.JoinRoom(roomName);
     }
+
+
 
     public override void OnJoinedRoom()
     {
