@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -32,11 +32,11 @@ public class Enemy : MonoBehaviour
         enemyCollider = GetComponent<Collider2D>();
         Manager.Instance.RegisterEnemy(this);
 
-        // Находим все точки пути с тегом
+        // РќР°С…РѕРґРёРј РІСЃРµ С‚РѕС‡РєРё РїСѓС‚Рё СЃ С‚РµРіРѕРј
         GameObject[] waypointsGO = GameObject.FindGameObjectsWithTag("MoveingPoint");
         wayPoints = new Transform[waypointsGO.Length];
 
-        // Сортировка по индексу WaypointIndex
+        // РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РёРЅРґРµРєСЃСѓ WaypointIndex
         System.Array.Sort(waypointsGO, (a, b) =>
             a.GetComponent<WaypointIndex>().index.CompareTo(
             b.GetComponent<WaypointIndex>().index)
@@ -126,8 +126,8 @@ public class Enemy : MonoBehaviour
         Manager.Instance.TotalKilled += 1;
         Manager.Instance.IsWaveOver();
         Manager.Instance.addMoney(rewardAmount);
-        Manager.Instance.UnregisterEnemy(this); // убрать из списка
-        Destroy(gameObject); // полностью удалить из сцены (если нужно)
+        Manager.Instance.UnregisterEnemy(this); // СѓР±СЂР°С‚СЊ РёР· СЃРїРёСЃРєР°
+        Destroy(gameObject); // РїРѕР»РЅРѕСЃС‚СЊСЋ СѓРґР°Р»РёС‚СЊ РёР· СЃС†РµРЅС‹ (РµСЃР»Рё РЅСѓР¶РЅРѕ)
     }
 
 

@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 766807531}
   m_Layer: 8
   m_Name: BuildSpot (6)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -913,10 +913,9 @@ GameObject:
   - component: {fileID: 953013421}
   - component: {fileID: 953013420}
   - component: {fileID: 953013419}
-  - component: {fileID: 953013423}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1041,18 +1040,6 @@ Transform:
   - {fileID: 324194144795334004}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &953013423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953013418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc8ce1f378f84804791c7c60f6ab856b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1153700625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1131,7 @@ GameObject:
   - component: {fileID: 1214279766}
   m_Layer: 8
   m_Name: BuildSpot (1)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1546,7 +1533,7 @@ GameObject:
   - component: {fileID: 1504299831}
   m_Layer: 8
   m_Name: BuildSpot (4)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1680,7 +1667,7 @@ GameObject:
   - component: {fileID: 1594352131}
   m_Layer: 8
   m_Name: BuildSpot
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,7 +1801,7 @@ GameObject:
   - component: {fileID: 1667424731}
   m_Layer: 8
   m_Name: BuildSpot (2)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2106,7 +2093,7 @@ GameObject:
   - component: {fileID: 1781590718}
   m_Layer: 8
   m_Name: BuildSpot (3)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2240,7 +2227,7 @@ GameObject:
   - component: {fileID: 1839972397}
   m_Layer: 8
   m_Name: BuildSpot (7)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2374,7 +2361,7 @@ GameObject:
   - component: {fileID: 1917529174}
   m_Layer: 8
   m_Name: BuildSpot (5)
-  m_TagString: Untagged
+  m_TagString: TowerSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

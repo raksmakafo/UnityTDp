@@ -181,6 +181,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  fireCooldown: 1
 --- !u!114 &2920000181142086225
 MonoBehaviour:
   m_ObjectHideFlags: 0
