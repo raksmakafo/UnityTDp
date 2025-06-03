@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wallhaven-pk997m_0: -6773588002971337528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

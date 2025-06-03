@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Enemy
-  - MoviengPoint
-  - MoveingPoint
+  tags: []
   layers:
   - Default
   - TransparentFX
