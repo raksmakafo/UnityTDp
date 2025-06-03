@@ -5,6 +5,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public float speed;
     PhotonView view;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float fireCooldown = 1f;
+    private float lastFireTime;
+
     void Start()
     {
         view = GetComponent<PhotonView>();
