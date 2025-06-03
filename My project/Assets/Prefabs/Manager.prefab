@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4639014488083540496}
-  - component: {fileID: 557500650943134853}
+  - component: {fileID: 1817565794853941820}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_GameObject: {fileID: 604658508013488707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.23977, y: -0.0135, z: 10}
+  m_LocalPosition: {x: 1.0150785, y: 0.06407499, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &557500650943134853
+--- !u!114 &1817565794853941820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 604658508013488707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87aaec890fd20e843b2f7496b22fe5b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 45ad9dea36dd13e47a0a76fd501343ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   totalWaves: 10
@@ -50,10 +50,11 @@ MonoBehaviour:
   totalEscapedLabel: {fileID: 0}
   playBtnLabel: {fileID: 0}
   playBtn: {fileID: 0}
-  spawnPoint: {fileID: 17792618421796762, guid: ef6d7a5383ae61b48a6b4f02fd98896c, type: 3}
+  spawnPoint: {fileID: 0}
   enemies:
-  - {fileID: 6610686091740640489, guid: 71f749a9120658f4c98e87b20a654be6, type: 3}
-  - {fileID: -772150072574139050, guid: 9bddc011c39d981479eaab1dc341a975, type: 3}
+  - {fileID: 6077818344343114345, guid: 71f749a9120658f4c98e87b20a654be6, type: 3}
+  - {fileID: 8684485398819456567, guid: 9bddc011c39d981479eaab1dc341a975, type: 3}
+  totalHeartsLabel: {fileID: 0}
   totalEnemies: 8
   enemiesPerSpawn: 1
   EnemyList: []

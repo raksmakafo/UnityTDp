@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 04efb9bd76cc9ee4aa73aa561b59170e
+guid: 6ee6852e5d412d24ba84d4307ac9cc1a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -765150924802650856
-    second: arrow_0
+      213: 1901180886041813927
+    second: Pedia_tower_Arcane_Wizard_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrow_0
+      name: Pedia_tower_Arcane_Wizard_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 31
-        width: 280
-        height: 272
+        x: 0
+        y: 0
+        width: 344
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81d839fa943a165f0800000000000000
-      internalID: -765150924802650856
+      spriteID: 7a3e84661f9526a10800000000000000
+      internalID: 1901180886041813927
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      arrow_0: -765150924802650856
+      Pedia_tower_Arcane_Wizard_0: 1901180886041813927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
