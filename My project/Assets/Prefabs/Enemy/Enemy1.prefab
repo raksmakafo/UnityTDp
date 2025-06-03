@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exit: {fileID: 3325997669903614154, guid: ed6411365d241094098b6a18014aeda1, type: 3}
-  speed: 0.5
+  speed: 1
   wayPoints: []
   health: 50
   rewardAmount: 5
