@@ -1,14 +1,34 @@
 using UnityEngine;
 
-public class Loader : MonoBehaviour
+public class Loader<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public GameObject manager;
+    private static T instance;
 
-    void Awake() 
+    public static T Instance
     {
-        if (Manager.instance == null)
+        get
         {
-            Instantiate(manager);
+            if (instance == null)
+            {
+                instance = FindFirstObjectByType<T>();
+
+                if (instance == null)
+                {
+                    Debug.LogWarning($"[Loader] ќбъект типа {typeof(T)} не найден на сцене.");
+                }
+                else
+                {
+                    // ”бедитьс€, что объект Ч корневой
+                    if (instance.transform.parent != null)
+                    {
+                        instance.transform.SetParent(null);
+                    }
+
+                    DontDestroyOnLoad(instance.gameObject);
+                }
+            }
+
+            return instance;
         }
     }
 }
