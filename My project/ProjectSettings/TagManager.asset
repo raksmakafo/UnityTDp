@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - MoveingPoint
+  - Enemy
+  - TowerSideFull
+  - Ground
   layers:
   - Default
   - TransparentFX
