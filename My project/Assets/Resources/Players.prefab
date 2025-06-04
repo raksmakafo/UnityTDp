@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: -2683029839722504299}
   - component: {fileID: -7688889634868870130}
   - component: {fileID: 2920000181142086225}
+  - component: {fileID: -679609587481103925}
   m_Layer: 0
   m_Name: Players
   m_TagString: Untagged
@@ -217,3 +218,18 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &-679609587481103925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651555139398149550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675e5285db7a0bf419efe61e51e19894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 3
+  attackRadius: 10
+  projectile: {fileID: 418790980659372110, guid: 768baaa2ccca019438a53310ef9f8d19, type: 3}
