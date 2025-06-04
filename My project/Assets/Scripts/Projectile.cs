@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum projectileType
 {
-    lightning, arow
+    lightning, arow, sword
 
 
 };
