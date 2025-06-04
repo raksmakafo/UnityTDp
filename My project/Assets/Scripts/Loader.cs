@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public class Loader<T> : MonoBehaviour where T : MonoBehaviour
 {
@@ -14,11 +14,11 @@ public class Loader<T> : MonoBehaviour where T : MonoBehaviour
 
                 if (instance == null)
                 {
-                    Debug.LogWarning($"[Loader] Объект типа {typeof(T)} не найден на сцене.");
+                    Debug.LogWarning($"[Loader] РћР±СЉРµРєС‚ С‚РёРїР° {typeof(T)} РЅРµ РЅР°Р№РґРµРЅ РЅР° СЃС†РµРЅРµ.");
                 }
                 else
                 {
-                    // Убедиться, что объект — корневой
+                    // РЈР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ РѕР±СЉРµРєС‚ вЂ” РєРѕСЂРЅРµРІРѕР№
                     if (instance.transform.parent != null)
                     {
                         instance.transform.SetParent(null);

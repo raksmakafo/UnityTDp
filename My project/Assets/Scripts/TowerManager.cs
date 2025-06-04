@@ -84,23 +84,32 @@ public class TowerManager : Loader<TowerManager>
 
     public void PlaceTower(RaycastHit2D hit)
     {
-
         if (!Manager.Instance.IsGameStarted)
         {
-            Debug.Log("⛔️ Игра ещё не началась! Ставить башни нельзя.");
+            Debug.Log("⛔ Игра ещё не началась! Ставить башни нельзя.");
             return;
         }
+
         if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)
         {
-            TowerControl newTower = Instantiate(towerBtnPressed.TowerObject);
-            newTower.transform.position = hit.transform.position;
-            BuyTower(towerBtnPressed.TowerPrice);
-            RegisterTower(newTower);
-            DisableDrag();
+            int price = towerBtnPressed.TowerPrice;
 
+            if (Manager.Instance.TotalMoney >= price)
+            {
+                TowerControl newTower = Instantiate(towerBtnPressed.TowerObject);
+                newTower.transform.position = hit.transform.position;
+                Manager.Instance.subtractMoney(price); // списываем только если хватило
+                RegisterTower(newTower);
+            }
+            else
+            {
+                Debug.LogWarning("💸 Недостаточно средств для постройки башни!");
+            }
+
+            DisableDrag(); // независимо от успеха, выключаем тень
         }
-
     }
+
 
     public void BuyTower(int price)
     {

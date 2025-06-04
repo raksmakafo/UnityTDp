@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,14 +17,14 @@ public class TowerControl : MonoBehaviour
         attackCounter -= Time.deltaTime;
 
 
-        // Проверка цели
+        // РџСЂРѕРІРµСЂРєР° С†РµР»Рё
         if (targetEnemy == null || targetEnemy.gameObject == null || targetEnemy.IsDead || Vector2.Distance(transform.position, targetEnemy.transform.position) > attackRadius)
         {
             targetEnemy = GetNearestEnemy();
         }
 
 
-        // Если цель есть и время пришло — начинаем атаку
+        // Р•СЃР»Рё С†РµР»СЊ РµСЃС‚СЊ Рё РІСЂРµРјСЏ РїСЂРёС€Р»Рѕ вЂ” РЅР°С‡РёРЅР°РµРј Р°С‚Р°РєСѓ
         if (targetEnemy != null && attackCounter <= 0f)
         {
             isAttacking = true;
@@ -51,14 +51,20 @@ public class TowerControl : MonoBehaviour
 
         if (newProjectile != null && targetEnemy != null)
         {
-            Debug.Log("Атака! Башня стреляет по " + targetEnemy.name);
+            Debug.Log("РђС‚Р°РєР°! Р‘Р°С€РЅСЏ СЃС‚СЂРµР»СЏРµС‚ РїРѕ " + targetEnemy.name);
             StartCoroutine(MoveProjectile(newProjectile));
         }
     }
 
     IEnumerator MoveProjectile(Projectile projectile)
     {
-        while (projectile != null && targetEnemy != null && Vector2.Distance(projectile.transform.position, targetEnemy.transform.position) > 0.2f)
+        while (
+            projectile != null &&
+            targetEnemy != null &&
+            !targetEnemy.IsDead &&
+            Vector2.Distance(projectile.transform.position, targetEnemy.transform.position) > 0.2f &&
+            Vector2.Distance(transform.position, targetEnemy.transform.position) <= attackRadius // <- РґРѕР±Р°РІР»РµРЅРѕ
+        )
         {
             Vector2 direction = targetEnemy.transform.position - projectile.transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -68,11 +74,13 @@ public class TowerControl : MonoBehaviour
             yield return null;
         }
 
+        // Р•СЃР»Рё РІСЂР°Рі СѓРјРµСЂ РёР»Рё РІС‹С€РµР» РёР· Р·РѕРЅС‹ вЂ” СѓРґР°Р»РёС‚СЊ СЃРЅР°СЂСЏРґ
         if (projectile != null)
         {
-            Destroy(projectile);
+            Destroy(projectile.gameObject);
         }
     }
+
 
     Enemy GetNearestEnemy()
     {
@@ -93,7 +101,7 @@ public class TowerControl : MonoBehaviour
 
         if (nearestEnemy != null)
         {
-            Debug.Log("Новая цель: " + nearestEnemy.name);
+            Debug.Log("РќРѕРІР°СЏ С†РµР»СЊ: " + nearestEnemy.name);
         }
 
         return nearestEnemy;

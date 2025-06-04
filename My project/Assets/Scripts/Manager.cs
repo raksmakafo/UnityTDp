@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -134,7 +130,7 @@ public class Manager : Loader<Manager>
         {
             if (enemies[i] == null)
             {
-                Debug.LogError($"❗️ Враг с индексом {i} в массиве 'enemies' не задан (null). Проверь инспектор.");
+                Debug.LogError($"❗ Враг с индексом {i} в массиве 'enemies' не задан (null). Проверь инспектор.");
             }
         }
     }
@@ -208,15 +204,15 @@ public class Manager : Loader<Manager>
 
     }
 
-   
-public void addMoney(int amount)
+    public void addMoney(int amount)
     {
         TotalMoney += amount;
     }
     public void subtractMoney(int amount)
     {
-        TotalMoney -= amount;
+        TotalMoney = Mathf.Max(0, TotalMoney - amount);
     }
+
 
     public void minusHeart(int amount)
     {
@@ -224,7 +220,7 @@ public void addMoney(int amount)
         if (TotalHearts <= 0)
         {
             TotalHearts = 0; // Чтобы не было отрицательных
-            currentState = gameStatus.yourLose;
+            SetCurrentGameState();
             ShowMenu(); // Показать кнопку “PLAY AGAIN!”
             DestroyEnemies(); // Можно добавить, чтобы очистить врагов
         }
@@ -250,26 +246,20 @@ public void addMoney(int amount)
 
     public void SetCurrentGameState()
     {
-
-        if (totalEscaped >= 10)
+        if (TotalHearts <= 0 || totalEscaped >= 10)
         {
-            currentState = gameStatus.gameover;
-
-        }
-        else if (waveNumber == 0 && (RoundEscaped + TotalKilled) == 0)
-        {
-            currentState = gameStatus.play;
+            currentState = gameStatus.yourLose;
         }
         else if (waveNumber >= totalWaves)
         {
             currentState = gameStatus.win;
-
         }
         else
         {
             currentState = gameStatus.next;
         }
     }
+
 
     public void PlayButtonPressed()
     {
