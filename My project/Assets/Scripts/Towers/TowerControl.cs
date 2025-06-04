@@ -49,6 +49,9 @@ public class TowerControl : MonoBehaviour
         Projectile newProjectile = Instantiate(projectile);
         newProjectile.transform.position = transform.position;
 
+        float damageMultiplier = Mathf.Pow(1.2f, Manager.Instance.WaveNumber - 1);
+        newProjectile.ScaleDamage(damageMultiplier);
+
         if (newProjectile != null && targetEnemy != null)
         {
             Debug.Log("Атака! Башня стреляет по " + targetEnemy.name);

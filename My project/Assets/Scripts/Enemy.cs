@@ -131,4 +131,8 @@ public class Enemy : MonoBehaviour
     }
 
 
+    public void ScaleHealth(float multiplier)
+    {
+        health = Mathf.CeilToInt(health * multiplier);
+    }
 }

@@ -8,6 +8,8 @@ public enum gameStatus
 {
     next, play, gameover, win, yourLose
 }
+
+
 public class Manager : Loader<Manager>
 {
     public bool IsGameStarted { get; private set; } = false;
@@ -43,6 +45,12 @@ public class Manager : Loader<Manager>
     int totalKilled = 0;
     int whichEnemiesToSpawn = 0;
     int enemiesToSpawn = 0;
+
+
+    public int WaveNumber
+    {
+        get { return waveNumber; }
+    }
 
     gameStatus currentState = gameStatus.play;
 
@@ -166,6 +174,9 @@ public class Manager : Loader<Manager>
                     // Спавним врага
                     Enemy newEnemy = Instantiate(enemyToSpawn);
                     newEnemy.transform.position = spawnPoint.transform.position;
+
+                    float healthMultiplier = Mathf.Pow(1.5f, waveNumber - 1); // волна 1 = x1, 2 = x1.5, 3 = x2.25 и т.д.
+                    newEnemy.ScaleHealth(healthMultiplier);
 
                     spawnedEnemiesCount++;
                 }

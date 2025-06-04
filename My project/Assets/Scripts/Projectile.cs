@@ -35,4 +35,9 @@ public class Projectile : MonoBehaviour
 
         }
     }
+    public void ScaleDamage(float multiplier)
+    {
+        attackDamage = Mathf.RoundToInt(attackDamage * multiplier);
+    }
+
 }
