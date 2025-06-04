@@ -2733,6 +2733,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1329388184}
     - target: {fileID: 1817565794853941820, guid: fbdfd351cc1060941b2fd1cb413d58ab, type: 3}
+      propertyPath: totalWaves
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817565794853941820, guid: fbdfd351cc1060941b2fd1cb413d58ab, type: 3}
       propertyPath: currentWave
       value: 
       objectReference: {fileID: 1286719514}
